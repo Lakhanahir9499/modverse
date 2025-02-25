@@ -3,7 +3,7 @@
 
 ModVerse is your go-to platform for premium modded apps with unlocked features, ad-free experiences, and enhanced functionality. Whether you’re looking for modded games, premium music apps, or pro-level photo editors, we’ve got you covered.
 
-🌍 Visit Now: modverse.online
+🌍 Visit Now: www.modverse.online
 
 
 ---
@@ -49,7 +49,7 @@ Download Mod APK, Best Modded Apps, Premium App Mods, Game Hacks, Ad-Free APKs
 
 🎨 Website Preview
 
- (Replace with actual screenshot)
+ www.modverse.online
 
 
 ---
@@ -85,7 +85,7 @@ Performance Enhancements: Lightweight design, fast loading
 📬 Connect With Us
 
 📧 Email: support@modverse.online
-🌐 Website: modverse.online
+🌐 Website: www.modverse.online
 📺 YouTube: not available 
 
 
