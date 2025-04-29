@@ -1,214 +1,231 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9H2Z782PSL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H2Z782PSL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-9H2Z782PSL');
+  </script>
 
-  gtag('config', 'G-9H2Z782PSL');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ModVerse - Download premium modded apps with unlocked features, ad-free experiences, and more.">
+  <meta name="keywords" content="modverse, mod apps, Netflix mod, premium apps, hotstar mod, modded apps">
+  <title>ModVerse - Premium Modded Apps</title>
 
-    <meta name="a96f26021631aa179297ed07ed3c7be3c16a0f16" content="a96f26021631aa179297ed07ed3c7be3c16a0f16" />
-    <meta name="description" content="ModVerse - Download premium modded apps with unlocked features, ad-free experiences, and more.">
-	<meta name="keywords" content="modverse, modverse online, modverse.online, mod apps, Netflix mod, Netflix mod apk, premium apps, hotstar mod, remini mod, happy mod, modded apps " />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-    <title>ModVerse - Premium Modded Apps</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-	
-    <style>
-        :root {
-            --primary: #6c5ce7;
-            --secondary: #a8a5e6;
-            --dark: #0a0a0a;
-            --light: #ffffff;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }body {
-        background: var(--dark);
-        color: var(--light);
-        line-height: 1.6;
-        overflow-x: hidden;
+  <style>
+    :root {
+      --primary: #6c5ce7;
+      --secondary: #a8a5e6;
+      --dark: #0a0a0a;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .header {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1rem;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--light);
     }
 
     .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: var(--primary);
-        animation: glow 1.5s infinite alternate;
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary);
+      animation: glow 1.5s infinite alternate;
     }
-    
+
     @keyframes glow {
-        from {
-            text-shadow: 0 0 5px var(--primary), 0 0 10px var(--secondary);
-        }
-        to {
-            text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
-        }
+      from {
+        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--secondary);
+      }
+      to {
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
+      }
+    }
+
+    .search-box {
+      padding: 0.5rem;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 200px;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #111;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu li {
+      padding: 15px 20px;
+    }
+
+    .side-menu li a {
+      color: white;
+      text-decoration: none;
+      display: block;
     }
 
     .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding-top: 80px;
     }
 
     canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     .app-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .app-card {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 1rem;
-        text-align: center;
-        transition: transform 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
 
     .app-card:hover {
-        transform: translateY(-5px);
+      transform: translateY(-5px);
     }
 
     .download-btn {
-        background: linear-gradient(45deg, var(--primary), var(--secondary));
-        color: white;
-        padding: 0.8rem 1.5rem;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        text-transform: uppercase;
-        font-weight: bold;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: bold;
     }
-</style>
-    
-    
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--light);
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-  <div class="logo">ModVerse</div>
-  <input type="text" class="search-box" placeholder="Search apps..." id="searchInput">
-</header>
+  <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="logo">ModVerse</div>
+    <input type="text" class="search-box" placeholder="Search apps..." id="searchInput">
+  </header>
 
-<nav id="sideMenu" class="side-menu">
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#apps">Apps</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-	<style>
-  .side-menu {
-    position: fixed;
-    top: 0;
-    left: -250px; /* hidden */
-    width: 250px;
-    height: 100%;
-    background-color: #111;
-    padding-top: 60px;
-    transition: left 0.3s ease;
-    z-index: 999;
-  }
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  .side-menu.open {
-    left: 0;
-  }
+  <canvas id="bgCanvas"></canvas>
 
-  .side-menu ul {
-    list-style: none;
-    padding: 0;
-  }
+  <section class="hero" id="home">
+    <h1>Premium Modded Apps</h1>
+    <p>Unlocked Features • Ad-Free • Premium Content</p>
+  </section>
 
-  .side-menu li {
-    padding: 15px 20px;
-  }
-
-  .side-menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-  }
-
-  .menu-icon {
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--light);
-  }
-	</style>
-	<script>
-  function toggleMenu() {
-    const sideMenu = document.getElementById('sideMenu');
-    sideMenu.classList.toggle('open');
-  }
-	</script>
-    
-    <canvas id="bgCanvas"></canvas>
-    <section class="hero" id="home">
-        <h1>Premium Modded Apps</h1>
-        <p>Unlocked Features • Ad-Free • Premium Content</p>
-    </section><section class="app-grid" id="apps">
+  <section class="app-grid" id="apps">
     <div class="app-card" data-name="JioHotstar mod">
-        <img src="images/jio-hotstar.jpg" alt="jio-hotstar-mod">
-        <h3>JioHotstar mod</h3>
-        <p>Unlocked Premium Features</p>
-        <a href="jio-hotstar.html"><button class="download-btn">Download</button></a>
+      <img src="images/jio-hotstar.jpg" alt="jio-hotstar-mod" style="width: 100%; border-radius: 10px;">
+      <h3>JioHotstar mod</h3>
+      <p>Unlocked Premium Features</p>
+      <a href="jio-hotstar.html"><button class="download-btn">Download</button></a>
     </div>
-    </section>
 
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById("sideMenu");
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
-        } else {
-            menu.style.display = "block";
-        }
-    }
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-    // Background animation
+    <div class="app-card" data-name="Netflix Mod">
+      <img src="images/netflix.jpg" alt="netflix-mod" style="width: 100%; border-radius: 10px;">
+      <h3>Netflix Mod</h3>
+      <p>Ad-Free + Premium</p>
+      <a href="netflix.html"><button class="download-btn">Download</button></a>
+    </div>
+  </section>
+
+  <div id="noResults" style="text-align: center; margin-top: 1rem; display: none;">No results found.</div>
+
+  <a href="https://www.modverse.online/testad.html"><button class="download-btn" style="margin: 2rem auto; display: block; max-width: 300px;">Ads test button</button></a>
+
+  <footer>
+    <p>&copy; 2025 ModVerse. All rights reserved.</p>
+  </footer>
+
+  <!-- Background animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("bgCanvas"), alpha: true });
@@ -218,51 +235,54 @@
     const particles = new THREE.BufferGeometry();
     const particleCount = 500;
     const positions = new Float32Array(particleCount * 3);
-    
+
     for (let i = 0; i < particleCount * 3; i++) {
-        positions[i] = (Math.random() - 0.5) * 10;
+      positions[i] = (Math.random() - 0.5) * 10;
     }
-    
+
     particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    
+
     const material = new THREE.PointsMaterial({ color: 0x6c5ce7, size: 0.05 });
     const particleSystem = new THREE.Points(particles, material);
     scene.add(particleSystem);
-    
     camera.position.z = 5;
-    
+
     function animate() {
-        requestAnimationFrame(animate);
-        particleSystem.rotation.y += 0.002;
-        renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+      particleSystem.rotation.y += 0.002;
+      renderer.render(scene, camera);
     }
-    
+
     animate();
-</script>
-    
+  </script>
 
-    
-    <a href="https://www.modverse.online/testad.html"><button class="download-btn">Ads test button</button></a>
+  <!-- Menu toggle -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
 
-<script>
+  <!-- Search Logic -->
+  <script>
     document.getElementById("searchInput").addEventListener("input", function () {
-        const query = this.value.toLowerCase();
-        const cards = document.querySelectorAll(".app-card");
+      const query = this.value.toLowerCase();
+      const cards = document.querySelectorAll(".app-card");
+      let found = false;
 
-        cards.forEach(card => {
-            const name = card.getAttribute("data-name").toLowerCase();
-            if (name.includes(query)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
+      cards.forEach(card => {
+        const name = card.getAttribute("data-name").toLowerCase();
+        if (name.includes(query)) {
+          card.style.display = "block";
+          found = true;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      const noResults = document.getElementById("noResults");
+      noResults.style.display = found ? "none" : "block";
     });
-</script>
-	    
-    <footer style="text-align: center; padding: 1rem; color: var(--light);">
-    <p>&copy; 2025 ModVerse. All rights reserved.</p>
-	
-    </footer>
+  </script>
 </body>
 </html>
