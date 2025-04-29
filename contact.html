@@ -55,6 +55,12 @@
       align-items: center;
     }
 
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--light);
+    }
+
     .logo {
       font-size: 24px;
       font-weight: bold;
@@ -92,9 +98,42 @@
 
     .search-box {
       padding: 0.5rem;
-      border-radius: 5px;
+      border-radius: 20px;
       border: none;
+      outline: none;
       width: 200px;
+    }
+
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #111;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu li {
+      padding: 15px 20px;
+    }
+
+    .side-menu li a {
+      color: white;
+      text-decoration: none;
+      display: block;
     }
 
     section.content {
@@ -120,9 +159,19 @@
 </head>
 <body>
   <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     <div class="logo">ModVerse</div>
-    <input type="text" class="search-box" placeholder="Search tools..." id="searchInput">
+    <input type="text" class="search-box" placeholder="Search..." id="searchInput">
   </header>
+<nav id="sideMenu" class="side-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://tempmail.modverse.online/">Tempmail</a></li>
+    </ul>
+</nav>
+  
 
   <canvas id="bgCanvas"></canvas>
 
