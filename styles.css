@@ -4,24 +4,38 @@
     padding: 10px;
 }
 
-.navbar {
-    display: flex;
-    gap: 1rem;
-}
-
-.navbar a {
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 1rem;
     color: var(--light);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+    padding-top: 60px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+.side-menu a {
+    padding: 1rem;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    transition: background 0.2s;
 }
 
-.navbar a:hover {
-    color: var(--primary);
+.side-menu a:hover {
+    background: var(--primary);
 }
 
-.search-box {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
+.side-menu.open {
+    left: 0;
 }
