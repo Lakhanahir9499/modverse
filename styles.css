@@ -4,19 +4,34 @@
     padding: 10px;
 }
 
+
 .side-menu {
     position: fixed;
-    top: 60px; /* below header */
+    top: 60px;
     right: 0;
+    background: rgba(10, 10, 10, 0.95);
     width: 200px;
-    background: #1a1a1a;
     display: none;
     flex-direction: column;
     padding: 1rem;
     z-index: 999;
+    border-left: 2px solid var(--primary);
 }
+
 .side-menu a {
     color: var(--light);
     text-decoration: none;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.side-menu a:hover {
+    color: var(--primary);
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--light);
 }
