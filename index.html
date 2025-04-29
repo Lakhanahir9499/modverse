@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H2Z782PSL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9H2Z782PSL');
   </script>
 
+  <meta name="a96f26021631aa179297ed07ed3c7be3c16a0f16" content="a96f26021631aa179297ed07ed3c7be3c16a0f16" />
+  <meta name="description" content="ModVerse - Explore AI Tools, TempMail, and Digital Services.">
+  <meta name="keywords" content="modverse, tempmail, ai tools, modverse.online, privacy tools, resume ai, roast generator, instagram caption ai" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ModVerse - Download premium modded apps with unlocked features, ad-free experiences, and more.">
-  <meta name="keywords" content="modverse, mod apps, Netflix mod, premium apps, hotstar mod, modded apps">
-  <title>ModVerse - Premium Modded Apps</title>
-
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <title>ModVerse - AI Tools & TempMail</title>
 
   <style>
     :root {
@@ -77,6 +77,25 @@
       }
     }
 
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      flex-direction: column;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
     .search-box {
       padding: 0.5rem;
       border-radius: 20px;
@@ -84,6 +103,7 @@
       outline: none;
       width: 200px;
     }
+
 
     .side-menu {
       position: fixed;
@@ -116,57 +136,18 @@
       display: block;
     }
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      padding-top: 80px;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .app-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+    section.content {
       padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .app-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s ease;
+    h2, h3 {
+      color: var(--primary);
     }
 
-    .app-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .download-btn {
-      background: linear-gradient(45deg, var(--primary), var(--secondary));
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      display: block;
-      width: 100%;
-      text-transform: uppercase;
-      font-weight: bold;
+    ul {
+      padding-left: 1.2rem;
     }
 
     footer {
@@ -176,57 +157,67 @@
     }
   </style>
 </head>
-
 <body>
   <header class="header">
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     <div class="logo">ModVerse</div>
     <input type="text" class="search-box" placeholder="Search..." id="searchInput">
   </header>
-
-  <nav id="sideMenu" class="side-menu">
+<nav id="sideMenu" class="side-menu">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#apps">Apps</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://tempmail.modverse.online/">Tempmail</a></li>
     </ul>
-  </nav>
+</nav>
+  
 
   <canvas id="bgCanvas"></canvas>
 
   <section class="hero" id="home">
-    <h1>Premium Modded Apps</h1>
-    <p>Unlocked Features • Ad-Free • Premium Content</p>
+    <h1>Welcome to ModVerse</h1>
+    <p>Explore Tools & Services Made for the Next-Gen Internet</p>
   </section>
 
-  <section class="app-grid" id="apps">
-    <div class="app-card" data-name="JioHotstar mod">
-      <img src="images/jio-hotstar.jpg" alt="jio-hotstar-mod" style="width: 100%; border-radius: 10px;">
-      <h3>JioHotstar mod</h3>
-      <p>Unlocked Premium Features</p>
-      <a href="jio-hotstar.html"><button class="download-btn">Download</button></a>
-    </div>
+  <section class="content">
+    <h2>Our Free Services</h2>
+    <p>
+      ModVerse aims to provide next-level tools to enhance your digital lifestyle.
+      We offer free and privacy-focused services for every kind of user. Whether you're a tech geek or a privacy lover,
+      you'll find something useful here.
+    </p>
 
-    <div class="app-card" data-name="Netflix Mod">
-      <img src="images/netflix.jpg" alt="netflix-mod" style="width: 100%; border-radius: 10px;">
-      <h3>Netflix Mod</h3>
-      <p>Ad-Free + Premium</p>
-      <a href="netflix.html"><button class="download-btn">Download</button></a>
-    </div>
+    <h3 style="margin-top: 2rem;">TempMail (Active)</h3>
+    <p>
+      Get instant, disposable email addresses with our TempMail service. Avoid spam, protect your privacy, and register
+      anywhere without revealing your real email.
+    </p>
+    <ul>
+      <li>One-tap Email Generation</li>
+      <li>Check Inbox Instantly</li>
+      <li>Private & Secure</li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Coming Soon: AI Tools</h3>
+    <p>We are working on a range of cutting-edge AI tools to make your online experience smoother and smarter:</p>
+    <ul>
+      <li><strong>AI Resume Builder</strong> – Create professional resumes in seconds using smart templates</li>
+      <li><strong>AI Chat Assistant</strong> – A personal assistant powered by powerful language models</li>
+      <li><strong>Roast Generator</strong> – Desi-style AI roast tool for fun with friends</li>
+      <li><strong>CodeFix AI</strong> – Instantly debug and improve your code using machine learning</li>
+      <li><strong>Auto Caption Tool</strong> – Generate Instagram/YouTube captions using trending AI logic</li>
+    </ul>
+
+    <p style="margin-top: 1.5rem;">
+      Stay tuned! We are expanding fast and constantly rolling out new tools under the ModVerse ecosystem.
+      Bookmark our site or follow us on Instagram to get notified.
+    </p>
   </section>
 
-  <div id="noResults" style="text-align: center; margin-top: 1rem; display: none;">No results found.</div>
-
-  <a href="https://www.modverse.online/testad.html"><button class="download-btn" style="margin: 2rem auto; display: block; max-width: 300px;">Ads test button</button></a>
-
-  <footer>
-    <p>&copy; 2025 ModVerse. All rights reserved.</p>
-  </footer>
-
-  <!-- Background animation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script>
+    // Background animation
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("bgCanvas"), alpha: true });
@@ -246,6 +237,7 @@
     const material = new THREE.PointsMaterial({ color: 0x6c5ce7, size: 0.05 });
     const particleSystem = new THREE.Points(particles, material);
     scene.add(particleSystem);
+
     camera.position.z = 5;
 
     function animate() {
@@ -257,34 +249,29 @@
     animate();
   </script>
 
-  <!-- Menu toggle -->
+   <!-- Menu toggle -->
   <script>
     function toggleMenu() {
       document.getElementById("sideMenu").classList.toggle("open");
     }
   </script>
+  
 
-  <!-- Search Logic -->
   <script>
+    // Search placeholder functionality
     document.getElementById("searchInput").addEventListener("input", function () {
       const query = this.value.toLowerCase();
-      const cards = document.querySelectorAll(".app-card");
-      let found = false;
-
-      cards.forEach(card => {
-        const name = card.getAttribute("data-name").toLowerCase();
-        if (name.includes(query)) {
-          card.style.display = "block";
-          found = true;
-        } else {
-          card.style.display = "none";
-        }
-      });
-
-      const noResults = document.getElementById("noResults");
-      noResults.style.display = found ? "none" : "block";
+      const content = document.querySelector(".content");
+      if (query.includes("tempmail") || query.includes("email")) {
+        content.scrollIntoView({ behavior: "smooth" });
+      } else if (query.includes("ai") || query.includes("tools") || query.includes("roast")) {
+        content.scrollIntoView({ behavior: "smooth" });
+      }
     });
   </script>
+
+  <footer>
+    <p>&copy; 2025 ModVerse. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-
