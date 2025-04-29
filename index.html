@@ -146,7 +146,16 @@
     </div>
     </section>
 
-
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("sideMenu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
     // Background animation
