@@ -126,19 +126,18 @@
 </head>
 <body>
     <header class="header">
-  <div class="top-bar">
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <h1 class="logo">ModVerse</h1>
-    <input type="text" id="searchInput" placeholder="Search apps..." class="search-bar" />
-  </div>
-  <nav id="navMenu" class="side-nav">
-    <a href="#">Home</a>
-    <a href="#">Apps</a>
-    <a href="#">Contact</a>
-    <a href="#">Visit</a>
-    <a href="#">Main Site</a>
-  </nav>
-    </header>
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <div class="logo">ModVerse</div>
+  <input type="text" class="search-box" placeholder="Search apps..." id="searchInput">
+</header>
+
+<nav id="sideMenu" class="side-menu">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#apps">Apps</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
     
     <canvas id="bgCanvas"></canvas>
     <section class="hero" id="home">
