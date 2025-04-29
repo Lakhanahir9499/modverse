@@ -4,12 +4,24 @@
     padding: 10px;
 }
 
+.navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
 .search-box {
     padding: 0.5rem;
     border-radius: 5px;
     border: none;
-    outline: none;
-    width: 200px;
-    background: var(--light);
-    color: var(--dark);
 }
