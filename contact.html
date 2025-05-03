@@ -2,200 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Modverse</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <style>
-    body {
-      margin: 0;
-      background: var(--dark);
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-
-    .header {
-      background: rgba(0, 0, 0, 0.9);
-      padding: 1rem;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      flex-direction: column;
-    }
-
-    .menu-icon {
-      font-size: 28px;
-      cursor: pointer;
-      color: var(--light);
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: var(--primary);
-      animation: glow 1.5s infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--secondary);
-      }
-      to {
-        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
-      }
-    }
-
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background-color: #111;
-      padding-top: 60px;
-      transition: left 0.3s ease;
-      z-index: 999;
-    }
-
-    .side-menu.open {
-      left: 0;
-    }
-
-    .side-menu ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .side-menu li {
-      padding: 15px 20px;
-    }
-
-    .side-menu li a {
-      color: white;
-      text-decoration: none;
-      display: block;
-    }
-
-    .contact-container {
-      max-width: 700px;
-      margin: 120px auto 50px auto;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #00adb5;
-    }
-
-    .contact-container h1 {
-      text-align: center;
-      color: #00adb5;
-      margin-bottom: 20px;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .contact-info a {
-      color: #00fff5;
-      text-decoration: none;
-    }
-
-    canvas#bgCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: var(--light);
-      }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - ModVerse</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <div class="logo">Modverse</div>
-  </header>
 
-  <nav id="sideMenu" class="side-menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="https://tempmail.modverse.online">Temp Mail</a></li>
-      <li><a href="https://lakhan.modverse.online/">About</a></li>
-      <li><a href="privecy.html">Privacy Policy</a></li>
-    </ul>
-  </nav>
-
-  <canvas id="bgCanvas"></canvas>
-
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <div class="contact-info">
-      <p><strong>Telegram Channel:</strong> <a href="https://t.me/modverse_online" target="_blank">https://t.me/modverse_online</a></p>
-      <p><strong>Telegram ID:</strong> <a href="https://t.me/lakhan_lakhnotra" target="_blank">@lakhan_lakhnotra</a></p>
-      <p><strong>Email (Support):</strong> support@modverse.online</p>
-      <p><strong>Location:</strong> India (Remote Support)</p>
-      <p><strong>Availability:</strong> Mon–Sat, 10AM – 6PM IST</p>
-    </div>
+  <!-- Background Animation -->
+  <div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>  <script>
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("bgCanvas"), alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+  <!-- Header / Logo -->
+  <header style="text-align:center; padding: 20px;">
+    <img src="assets/img/logo.png" alt="ModVerse Logo" style="max-width: 200px;" />
+  </header>
 
-    const particles = new THREE.BufferGeometry();
-    const particleCount = 500;
-    const positions = new Float32Array(particleCount * 3);
+  <!-- Contact Form Section -->
+  <section style="max-width: 500px; margin: auto; background: rgba(0,0,0,0.6); padding: 20px; border-radius: 10px; color: #fff;">
+    <h2 style="text-align:center;">Contact Us</h2>
+    <form action="mailto:your@email.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;" /><br /><br />
 
-    for (let i = 0; i < particleCount * 3; i++) {
-      positions[i] = (Math.random() - 0.5) * 10;
-    }
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;" /><br /><br />
 
-    particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    const material = new THREE.PointsMaterial({ color: 0x6c5ce7, size: 0.05 });
-    const particleSystem = new THREE.Points(particles, material);
-    scene.add(particleSystem);
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px;"></textarea><br /><br />
 
-    camera.position.z = 5;
+      <button type="submit" style="padding: 10px 20px;">Send</button>
+    </form>
+  </section>
 
-    function animate() {
-      requestAnimationFrame(animate);
-      particleSystem.rotation.y += 0.002;
-      renderer.render(scene, camera);
-    }
-    animate();
-  </script>  <script>
-    function toggleMenu() {
-      document.getElementById("sideMenu").classList.toggle("open");
-    }
-  </script>  <script>
-    document.getElementById("searchInput").addEventListener("input", function () {
-      const query = this.value.toLowerCase();
-      const content = document.querySelector(".content");
-      if (query.includes("tempmail") || query.includes("email")) {
-        content.scrollIntoView({ behavior: "smooth" });
-      } else if (query.includes("ai") || query.includes("tools") || query.includes("roast")) {
-        content.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  </script>
+  <!-- Footer -->
+  <footer style="text-align:center; padding: 20px; color: #fff;">
+    <p>&copy; 2025 ModVerse. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
