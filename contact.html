@@ -7,47 +7,86 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
-    body {
+    :root {
+      --primary: #6c5ce7;
+      --secondary: #a8a5e6;
+      --dark: #0a0a0a;
+      --light: #ffffff;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .header {
       background: rgba(0, 0, 0, 0.9);
-      padding: 1rem 2rem;
+      padding: 1rem;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
 
     .menu-icon {
-      position: absolute;
-      left: 20px;
       font-size: 28px;
       cursor: pointer;
-      color: white;
+      color: var(--light);
     }
 
     .logo {
       font-size: 24px;
       font-weight: bold;
-      color: #00adb5;
+      color: var(--primary);
       animation: glow 1.5s infinite alternate;
-      text-align: center;
     }
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 5px #00adb5, 0 0 10px #00adb5;
+        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--secondary);
       }
       to {
-        text-shadow: 0 0 20px #00adb5, 0 0 30px #00adb5;
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
       }
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      flex-direction: column;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .search-box {
+      padding: 0.5rem;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 200px;
     }
 
     .side-menu {
@@ -81,36 +120,24 @@
       display: block;
     }
 
-    .contact-container {
-      max-width: 700px;
-      margin: 120px auto 50px auto;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #00adb5;
+    section.content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .contact-container h1 {
+    h2, h3 {
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
       text-align: center;
-      color: #00adb5;
-      margin-bottom: 20px;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .contact-info a {
-      color: #00fff5;
-      text-decoration: none;
-    }
-
-    canvas#bgCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
+      padding: 1rem;
+      color: var(--light);
     }
   </style>
 </head>
