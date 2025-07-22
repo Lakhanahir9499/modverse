@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Video Embed</title>
-  <style>
-    body {
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    video {
-      width: 80%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 0 30px #00f4ff33;
-    }
-  </style>
-</head>
-<body>
-  <video controls autoplay muted>
-    <source src="https://file-to-9bot-e7ca0fa0fd5a.herokuapp.com/stream/687f6212eed4f867e91673ba" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</body>
+  <head>
+    <title>Telegram Stream Embed</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        background: black;
+        height: 100%;
+      }
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe 
+      src="https://file-to-9bot-e7ca0fa0fd5a.herokuapp.com/watch/687f6212eed4f867e91673ba" 
+      allowfullscreen>
+    </iframe>
+  </body>
 </html>
