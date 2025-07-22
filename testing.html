@@ -1,50 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Unlimited Video Player</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .video-container {
-      position: relative;
-      width: 90%;
-      max-width: 800px;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      height: 0;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="video-container">
-    <iframe
-      src="https://archive.org/embed/1359339943775928319?autoplay=1"
-      allowfullscreen
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      allow="autoplay">
-    </iframe>
-  </div>
-
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Archive.org Video</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      video {
+        width: 100%;
+        max-width: 900px;
+        border: none;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <video controls autoplay>
+      <source src="https://archive.org/download/1359339943775928319/1359339943775928319.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </body>
 </html>
