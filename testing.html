@@ -2,30 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unlimited Video Player</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
-    }
-    .video-container {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-    iframe {
-      width: 90vw;
-      height: 50vh;
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
     }
   </style>
 </head>
 <body>
+
   <div class="video-container">
-    <iframe src="https://drive.google.com/file/d/1eTTlvl0MpQuZMojf1-05VublZUh8RlMT/preview"
-      allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <iframe
+      src="https://archive.org/embed/1359339943775928319?autoplay=1"
+      allowfullscreen
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      allow="autoplay">
+    </iframe>
   </div>
+
 </body>
 </html>
